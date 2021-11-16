@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="ca.mohawk.doto.ui.profile.ProfileFragment">
+
+
+    <TextView
+        android:id="@+id/logout_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="6dp"
+        android:text="Logout"
+        android:textStyle="bold"
+        android:clickable="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:textColor="@color/purple_500"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/username_textView"
+        app:layout_constraintTop_toTopOf="@+id/photo_imageView" />
+
+    <TextView
+        android:id="@+id/favorites_view_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:lineSpacingExtra="6dp"
+        android:text="Favourites"
+        android:textColor="@color/purple_500"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/username_textView"
+        app:layout_constraintTop_toBottomOf="@+id/logout_button" />
+
+    <Button
+        android:id="@+id/edit_profile_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:drawablePadding="20dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="edit"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline6" />
+
+    <TextView
+        android:id="@+id/username_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:lineSpacingExtra="6dp"
+        android:text="Username : "
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toEndOf="@+id/photo_imageView"
+        app:layout_constraintTop_toTopOf="@+id/photo_imageView" />
+
+    <TextView
+        android:id="@+id/bio_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:lineSpacingExtra="4dp"
+        android:text="Bio : "
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:lineSpacingExtra="6dp"
+        android:text="Bio"
+        android:textColor="@color/purple_500"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/photo_imageView" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:lineSpacingExtra="6dp"
+        android:text="Todo List"
+        android:textColor="@color/purple_500"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/bio_textView" />
+
+    <TextView
+        android:id="@+id/loc_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:lineSpacingExtra="6dp"
+        android:text="location : "
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toEndOf="@+id/photo_imageView"
+        app:layout_constraintTop_toBottomOf="@+id/username_textView" />
+
+    <TextView
+        android:id="@+id/gender_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="6dp"
+        android:text="Gender : "
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/loc_textView"
+        app:layout_constraintTop_toBottomOf="@+id/loc_textView" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/photo_imageView"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/default_user"
+        android:backgroundTint="@color/purple_200"
+        android:clickable="true"
+        android:elevation="2dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:paddingTop="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/edit_profile_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

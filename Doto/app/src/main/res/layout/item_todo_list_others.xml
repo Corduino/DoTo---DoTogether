@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:id="@+id/item"
+    android:layout_marginTop="2dp"
+    android:elevation="4dp"
+    android:layout_marginVertical="4dp"
+    android:layout_marginHorizontal="10dp"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_task_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:lineSpacingExtra="6dp"
+        android:text="This is task title"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_time_details"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_time_details"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="6dp"
+        android:text="time details"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_task_title"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9" />
+
+    <TextView
+        android:id="@+id/tv_location_details"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:lineSpacingExtra="6dp"
+        android:text="location details"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_time_details"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/tv_task_title" />
+
+    <TextView
+        android:id="@+id/tv_other_details"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:lineSpacingExtra="6dp"
+        android:text="these are other details"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/tv_location_details" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp" />
+
+    <ImageButton
+        android:id="@+id/btn_bookmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_other_details"
+        app:layout_constraintEnd_toEndOf="@+id/tv_time_details"
+        app:layout_constraintTop_toBottomOf="@+id/tv_time_details"
+        app:srcCompat="@drawable/ic_bookmark" />
+</androidx.constraintlayout.widget.ConstraintLayout>

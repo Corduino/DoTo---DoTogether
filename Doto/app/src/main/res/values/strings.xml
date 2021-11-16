@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">DoTo</string>
+    <string name="title_activity_main_navigation">MainNavigation</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="messages">Messages</string>
+    <string name="title_todo">Todo</string>
+    <string name="title_profile">Profile</string>
+    <string name="gender_spinner_prompt">Gender</string>
+
+    <string-array name="gender_spinner_items">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+</resources>

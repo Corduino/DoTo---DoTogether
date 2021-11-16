@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_700"
+    tools:context="ca.mohawk.doto.ViewProfile">
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:drawablePadding="20dp"
+        android:gravity="center"
+        android:onClick="on_messege_button"
+        android:padding="10dp"
+        android:text="Message"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline6" />
+
+    <TextView
+        android:id="@+id/username_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:lineSpacingExtra="6dp"
+        android:text="Name: "
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/toggleGroupadd_to_favourite"
+        app:layout_constraintStart_toEndOf="@+id/photo_imageView"
+        app:layout_constraintTop_toTopOf="@+id/photo_imageView" />
+
+    <TextView
+        android:id="@+id/bio_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:lineSpacingExtra="4dp"
+        android:text="Bio: "
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:lineSpacingExtra="6dp"
+        android:text="Bio"
+        android:textColor="@color/purple_500"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/photo_imageView" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:lineSpacingExtra="6dp"
+        android:text="Todo List"
+        android:textColor="@color/purple_500"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/bio_textView" />
+
+    <TextView
+        android:id="@+id/loc_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:lineSpacingExtra="6dp"
+        android:text="Location: "
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/toggleGroupadd_to_favourite"
+        app:layout_constraintStart_toEndOf="@+id/photo_imageView"
+        app:layout_constraintTop_toBottomOf="@+id/username_textView" />
+
+    <TextView
+        android:id="@+id/gender_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="6dp"
+        android:text="Gender: "
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/loc_textView"
+        app:layout_constraintTop_toBottomOf="@+id/loc_textView" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/photo_imageView"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/default_user"
+        android:backgroundTint="@color/purple_200"
+        android:clickable="true"
+        android:elevation="2dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:onClick="on_backPress"
+        android:padding="4dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_back" />
+
+    <nl.bryanderidder.themedtogglebuttongroup.ThemedToggleButtonGroup
+        android:id="@+id/toggleGroupadd_to_favourite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:alignItems="center"
+        app:justifyContent="center"
+        app:layout_constraintBottom_toBottomOf="@+id/photo_imageView"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toTopOf="@+id/photo_imageView"
+        app:toggle_requiredAmount="0"
+        app:toggle_selectableAmount="3">
+
+        <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+            android:id="@+id/btnMic"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:toggle_backgroundColor="@color/white"
+            app:toggle_borderColor="@color/black"
+            app:toggle_borderWidth="4dp"
+            app:toggle_btnCornerRadius="50dp"
+            app:toggle_icon="@drawable/ic__favorite_border"
+            app:toggle_iconColor="@color/black"
+            app:toggle_iconPadding="28dp"
+            app:toggle_selectedBackgroundColor="@color/purple_500"
+            app:toggle_selectedBorderColor="@color/purple_500"
+            app:toggle_selectedIcon="@drawable/ic_favorite" />
+
+        <!-- ... -->
+
+    </nl.bryanderidder.themedtogglebuttongroup.ThemedToggleButtonGroup>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:paddingTop="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,18 @@
+Things left to do
+
+Do gps call function for signup (then put it on update, and create / edit task)
+	Geo loaction to city name + maybe state / province
+
+add notifications for 1 hour before tasks (toggle-able in settings)
+
+add audio clips for profiles
+ - limit to 5 seconds
+
+store all passwords through a hash for security
+
+use id's as markers for convos
+
+add camera to options when trying to upload a photo
+	- in newer sdk, options went away
+	- need to get options back
+	-- then add camera

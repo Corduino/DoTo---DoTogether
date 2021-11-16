@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="5dp"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        tools:context="ca.mohawk.doto.ca.mohawk.doto.Signup">
+
+        <ImageButton
+            android:id="@+id/backButton_imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:onClick="on_backPress"
+            android:padding="4dp"
+            app:layout_constraintStart_toStartOf="@+id/guideline_one"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:id="@+id/subtitle_textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Signup"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_two"
+            app:layout_constraintStart_toStartOf="@+id/guideline_one"
+            app:layout_constraintTop_toBottomOf="@+id/backButton_imageView" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/photo_imageView"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/default_user"
+            android:clickable="true"
+            android:elevation="2dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_two"
+            app:layout_constraintStart_toStartOf="@+id/guideline_one"
+            app:layout_constraintTop_toBottomOf="@+id/subtitle_textView" />
+
+        <TextView
+            android:id="@+id/photoUpload_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:clickable="false"
+            android:text="Upload Profile"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/photo_imageView"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@+id/photo_imageView"
+            app:layout_constraintTop_toBottomOf="@+id/photo_imageView" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/username_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_two"
+            app:layout_constraintStart_toStartOf="@+id/guideline_one"
+            app:layout_constraintTop_toBottomOf="@+id/photoUpload_textView">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/username_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="12dp"
+                android:hint="Enter username"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/location_button"
+            android:layout_width="40dp"
+            android:layout_height="38dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="@+id/location_layout"
+            app:layout_constraintEnd_toEndOf="@id/guideline_two"
+            app:layout_constraintStart_toEndOf="@id/location_layout"
+            app:layout_constraintTop_toTopOf="@+id/location_layout"
+            app:srcCompat="@drawable/ic_home_black_24dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/location_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingRight="12dp"
+            app:layout_constraintEnd_toStartOf="@id/location_button"
+            app:layout_constraintStart_toStartOf="@+id/guideline_one"
+            app:layout_constraintTop_toBottomOf="@id/dob_layout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/location_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="12dp"
+                android:hint="Enter location"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.jaredrummler.materialspinner.MaterialSpinner
+            android:id="@+id/gender_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="59dp"
+            android:layout_marginTop="12dp"
+            android:elevation="2dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/dob_layout"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/guideline_one"
+            app:layout_constraintTop_toBottomOf="@+id/password_layout"
+            app:ms_arrow_tint="#666"
+            app:ms_background_color="@color/white"
+            app:ms_hint="Gender"
+            app:ms_hint_color="#666" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/dob_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toStartOf="@id/guideline_two"
+            app:layout_constraintStart_toEndOf="@id/gender_spinner"
+            app:layout_constraintTop_toBottomOf="@+id/password_layout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/dob_editText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:clickable="true"
+                android:drawablePadding="12dp"
+                android:focusable="false"
+                android:hint="Enter your DOB"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_two"
+            app:layout_constraintStart_toStartOf="@+id/guideline_one"
+            app:layout_constraintTop_toBottomOf="@+id/username_layout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email_reset_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="12dp"
+                android:hint="Enter email"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_two"
+            app:layout_constraintStart_toStartOf="@+id/guideline_one"
+            app:layout_constraintTop_toBottomOf="@+id/email_layout"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="12dp"
+                android:hint="Enter password"
+                android:inputType="textPassword"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_two"
+            app:layout_constraintGuide_begin="20dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="20dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/bio_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_two"
+            app:layout_constraintStart_toStartOf="@+id/guideline_one"
+            app:layout_constraintTop_toBottomOf="@id/location_layout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/bio_editText"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:drawablePadding="12dp"
+                android:gravity="start"
+                android:hint="Enter your bio"
+                android:inputType="textMultiLine"
+                android:lineSpacingExtra="4dp"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/signup_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="16dp"
+            android:drawablePadding="20dp"
+            android:gravity="center"
+            android:onClick="on_submit"
+            android:padding="10dp"
+            android:text="Signup"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_two"
+            app:layout_constraintStart_toStartOf="@+id/guideline_one"
+            app:layout_constraintTop_toBottomOf="@id/bio_layout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
