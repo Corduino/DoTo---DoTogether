@@ -19,7 +19,6 @@ import com.google.gson.Gson;
 import ca.mohawk.doto.Helpers.Config;
 import ca.mohawk.doto.Helpers.SharedPref;
 import ca.mohawk.doto.Objects.User;
-import ca.mohawk.doto.R;
 import ca.mohawk.doto.databinding.ActivityMainMenuBinding;
 
 import org.json.JSONArray;

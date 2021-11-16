@@ -37,12 +37,9 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 //These are the Indiviual cards that can be clicked from the Messeges Fragment, clicking this will open chat.java
 public class ChatsAdapter extends RecyclerView.Adapter<ChatsAdapter.ViewHolder> {
-
-    //All methods in this adapter are required for a bare minimum recyclerview adapter
     ArrayList<String> messages ;
     Context context;
 
-    // Constructor of the class
     public ChatsAdapter(Context context, ArrayList<String> messages) {
         this.context = context;
         this.messages = messages;
@@ -66,7 +63,6 @@ public class ChatsAdapter extends RecyclerView.Adapter<ChatsAdapter.ViewHolder> 
     @Override
     public void onBindViewHolder(final ViewHolder holder, @SuppressLint("RecyclerView") final int position) {
        try {
-           //This
            String url = Config.url + "/find_user.php";
            StringRequest postRequest = new StringRequest(Request.Method.POST, url,
                    new Response.Listener<String>() {

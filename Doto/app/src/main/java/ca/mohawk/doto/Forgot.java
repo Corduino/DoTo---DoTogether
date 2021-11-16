@@ -16,16 +16,12 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.google.gson.Gson;
-
-import org.json.JSONArray;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import ca.mohawk.doto.Helpers.Config;
 import ca.mohawk.doto.Helpers.EditTextValueCheck;
-import ca.mohawk.doto.Objects.User;
 
 public class Forgot extends AppCompatActivity {
     EditText emailEdit,userEdit;

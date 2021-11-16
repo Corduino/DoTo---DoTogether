@@ -21,7 +21,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import ca.mohawk.doto.Helpers.Config;
-import ca.mohawk.doto.Objects.User;
 
 public class Reset extends AppCompatActivity {
     EditText passEdit;

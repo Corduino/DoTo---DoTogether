@@ -1,7 +1,6 @@
 package ca.mohawk.doto.Adapters;
 
 import android.content.Context;
-import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,12 +21,12 @@ import java.util.Date;
 
 
 public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHolder> {
-    //All methods in this adapter are required for a bare minimum recyclerview adapter
     ArrayList<Message> messages;
     Context context;
     public void setMessages(ArrayList<Message> messages) {
         this.messages = messages;
     }
+
     // Constructor of the class
     public MessageAdapter(Context context, ArrayList<Message> messages) {
         this.context = context;

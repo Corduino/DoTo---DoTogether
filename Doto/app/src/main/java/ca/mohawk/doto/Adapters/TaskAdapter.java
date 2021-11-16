@@ -1,9 +1,7 @@
 package ca.mohawk.doto.Adapters;
 
-import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,13 +34,9 @@ import java.util.Map;
 
 
 public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> implements Filterable {
-
-    //All methods in this adapter are required for a bare minimum recyclerview adapter
     ArrayList<Task> tasks ,all;
     Context context;
 
-
-    // Constructor of the class
     public TaskAdapter(Context context, ArrayList<Task> tasks) {
         this.context = context;
         this.tasks = tasks;
@@ -104,6 +98,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> im
                            return params;
                        }
                    };
+                   //When user adds task, sets timer one hour before task
                    NotifyMe.Builder notify = new NotifyMe.Builder(context.getApplicationContext());
                    notify.title("You just set this bookmark!");
                    notify.content(holder.title.getText().toString());
@@ -115,8 +110,6 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> im
                    notify.build();
 
                    Volley.newRequestQueue(context).add(postRequest);
-
-
                }
            });
            holder.cardView.setOnClickListener(new View.OnClickListener() {

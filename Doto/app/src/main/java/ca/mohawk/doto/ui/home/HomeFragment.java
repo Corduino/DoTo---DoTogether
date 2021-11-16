@@ -225,7 +225,7 @@ public class HomeFragment extends Fragment {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<>();
-                // the POST parameters:
+                // the POST parameter:
                 params.put("email", new SharedPref(getContext()).GetSharedPref("email"));
 
                 return params;

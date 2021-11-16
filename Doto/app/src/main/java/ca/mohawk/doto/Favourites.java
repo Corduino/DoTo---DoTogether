@@ -16,7 +16,6 @@ import ca.mohawk.doto.Adapters.FavAdapter;
 import ca.mohawk.doto.Helpers.Config;
 import ca.mohawk.doto.Helpers.SharedPref;
 import com.google.gson.Gson;
-import ca.mohawk.doto.R;
 //https://github.com/google/gson
 import org.json.JSONArray;
 import org.json.JSONObject;

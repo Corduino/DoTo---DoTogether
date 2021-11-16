@@ -112,6 +112,7 @@ public class Upload {
       canvas.drawBitmap(bmp, middleX - bmp.getWidth() / 2, middleY - bmp.getHeight() / 2, new Paint(Paint.FILTER_BITMAP_FLAG));
 
       //Check the rotation of the image, to see if its right side up
+      //Still doesnt work, unfortunate
       ExifInterface exif;
       try {
           exif = new ExifInterface(filePath);

@@ -161,8 +161,6 @@ public class Chat extends AppCompatActivity {
                                 }
                             }
                         } catch (Exception e) {
-
-                            //  e.printStackTrace();
                             Toast.makeText(Chat.this, e.getMessage(), Toast.LENGTH_LONG).show();
                         }
                     }
@@ -196,16 +194,6 @@ public class Chat extends AppCompatActivity {
     public void on_refesh(View view) {
         getMessages();
     }
-    public String getID(String uid1,String uid2)
-    {
-        int x=uid1.compareTo(uid2);
-        if(x<0){
-            return uid1+uid2;
-        }
-        else{
-            return uid2+uid1;
-        }
-    }
 
     public void sendMessage(View view) {
 
@@ -223,9 +211,6 @@ public class Chat extends AppCompatActivity {
                     new Response.ErrorListener() {
                         @Override
                         public void onErrorResponse(VolleyError error) {
-                            //            pDialog.hide();
-
-                            // error.printStackTrace();
                             Toast.makeText(Chat.this, error.getMessage(), Toast.LENGTH_LONG).show();
 
                         }
@@ -251,6 +236,6 @@ public class Chat extends AppCompatActivity {
 
 
         }
-        getMessages();
+        on_refesh(view);
     }
 }

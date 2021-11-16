@@ -36,12 +36,9 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 
 public class FavAdapter extends RecyclerView.Adapter<FavAdapter.ViewHolder> {
-
-    //All methods in this adapter are required for a bare minimum recyclerview adapter
     ArrayList<String> favourites ;
     Context context;
 
-    // Constructor of the class
     public FavAdapter(Context context, ArrayList<String> favourites) {
         this.context = context;
         this.favourites = favourites;
@@ -110,7 +107,6 @@ public class FavAdapter extends RecyclerView.Adapter<FavAdapter.ViewHolder> {
                                });
 
                            } catch (Exception e) {
-
                                //  e.printStackTrace();
                            }
                        }
@@ -118,10 +114,7 @@ public class FavAdapter extends RecyclerView.Adapter<FavAdapter.ViewHolder> {
                    new Response.ErrorListener() {
                        @Override
                        public void onErrorResponse(VolleyError error) {
-
-                           // error.printStackTrace();
                            // Toast.makeText(getContext(), error.getMessage(), Toast.LENGTH_LONG).show();
-
                        }
                    }
            ) {
@@ -136,20 +129,13 @@ public class FavAdapter extends RecyclerView.Adapter<FavAdapter.ViewHolder> {
                    return params;
                }
            };
-
            Volley.newRequestQueue(context).add(postRequest);
-
-
-
-
-
 
        }catch (Exception e)
        {
 
        }
     }
-
 
     // Static inner class to initialize the views of rows
     static class ViewHolder extends RecyclerView.ViewHolder {

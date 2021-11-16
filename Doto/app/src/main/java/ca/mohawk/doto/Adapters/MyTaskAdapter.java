@@ -31,13 +31,9 @@ import java.util.Map;
 
 
 public class MyTaskAdapter extends RecyclerView.Adapter<MyTaskAdapter.ViewHolder> implements Filterable {
-
-    //All methods in this adapter are required for a bare minimum recyclerview adapter
     ArrayList<Task> tasks,all ;
     Context context;
-
     boolean bookmark;
-
 
     // Constructor of the class
     public MyTaskAdapter(Context context, ArrayList<Task> tasks,boolean bookmark) {
@@ -95,8 +91,6 @@ public class MyTaskAdapter extends RecyclerView.Adapter<MyTaskAdapter.ViewHolder
                                new Response.ErrorListener() {
                                    @Override
                                    public void onErrorResponse(VolleyError error) {
-
-                                       // error.printStackTrace();
                                        // Toast.makeText(getContext(), error.getMessage(), Toast.LENGTH_LONG).show();
 
                                    }
@@ -113,10 +107,7 @@ public class MyTaskAdapter extends RecyclerView.Adapter<MyTaskAdapter.ViewHolder
                                return params;
                            }
                        };
-
                        Volley.newRequestQueue(context).add(postRequest);
-
-
                    }
                });
            }else
@@ -141,23 +132,15 @@ public class MyTaskAdapter extends RecyclerView.Adapter<MyTaskAdapter.ViewHolder
                                new Response.Listener<String>() {
                                    @Override
                                    public void onResponse(String response) {
-
                                        tasks.remove(position);
                                        notifyDataSetChanged();
                                        Toast.makeText(context, response, Toast.LENGTH_SHORT).show();
-
-
-
-
                                    }
                                },
                                new Response.ErrorListener() {
                                    @Override
                                    public void onErrorResponse(VolleyError error) {
-
-                                       // error.printStackTrace();
                                        // Toast.makeText(getContext(), error.getMessage(), Toast.LENGTH_LONG).show();
-
                                    }
                                }
                        ) {
@@ -166,26 +149,18 @@ public class MyTaskAdapter extends RecyclerView.Adapter<MyTaskAdapter.ViewHolder
                                Map<String, String> params = new HashMap<>();
                                // the POST parameters:
                                params.put("id", tasks.get(position).id+"");
-
-
                                return params;
                            }
                        };
-
                        Volley.newRequestQueue(context).add(postRequest);
-
-
                    }
                });
            }
-
-
        }catch (Exception e)
        {
 
        }
     }
-
 
     // Static inner class to initialize the views of rows
     static class ViewHolder extends RecyclerView.ViewHolder {

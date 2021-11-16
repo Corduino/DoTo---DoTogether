@@ -30,7 +30,6 @@ import android.widget.Toast;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.HttpResponse;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 //https://developer.android.com/training/volley
@@ -168,13 +167,6 @@ public class Signup extends AppCompatActivity {
         LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
             return currentBestLocation;
         }
         Location locationGPS = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
@@ -211,7 +203,6 @@ public class Signup extends AppCompatActivity {
                     new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
-                            //              pDialog.dismiss();
                             try {
                                 Toast.makeText(Signup.this, ""+response, Toast.LENGTH_SHORT).show();
                                 SharedPref sh=new SharedPref(Signup.this);
@@ -220,8 +211,6 @@ public class Signup extends AppCompatActivity {
                                 startActivity(intent);
                                 finish();
                             } catch (Exception e) {
-
-                                //  e.printStackTrace();
                                 Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
                             }
                         }
@@ -229,9 +218,6 @@ public class Signup extends AppCompatActivity {
                     new Response.ErrorListener() {
                         @Override
                         public void onErrorResponse(VolleyError error) {
-                            //            pDialog.hide();
-
-                            // error.printStackTrace();
                             // Toast.makeText(getContext(), error.getMessage(), Toast.LENGTH_LONG).show();
 
                         }
