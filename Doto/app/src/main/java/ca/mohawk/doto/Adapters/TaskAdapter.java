@@ -98,7 +98,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> im
                            return params;
                        }
                    };
-                   //When user adds task, sets timer one hour before task
+                   //When user adds task, sets timer 10 seconds later "but can be set for an hour before the task"
                    NotifyMe.Builder notify = new NotifyMe.Builder(context.getApplicationContext());
                    notify.title("You just set this bookmark!");
                    notify.content(holder.title.getText().toString());

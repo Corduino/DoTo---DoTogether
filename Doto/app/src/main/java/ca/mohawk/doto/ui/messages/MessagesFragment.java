@@ -55,7 +55,7 @@ public class MessagesFragment extends Fragment {
                             if (response.startsWith("error")) {
                                 Toast.makeText(getContext(), "No Data Found", Toast.LENGTH_SHORT).show();
                             } else {
-                                Toast.makeText(getContext(), response, Toast.LENGTH_SHORT).show();
+                                //Toast.makeText(getContext(), response, Toast.LENGTH_SHORT).show();
                                 Log.e("dataMessege Frag",response);
                                 messages=new ArrayList<>();
                                 JSONArray array = new JSONArray(response);
